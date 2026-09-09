@@ -1,0 +1,464 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#080808;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* BACKGROUND */
+
+.bg-glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(150px);
+    opacity:.15;
+    z-index:-1;
+}
+
+.glow1{
+    background:#ffcc00;
+    top:-150px;
+    left:-150px;
+}
+
+.glow2{
+    background:#ffcc00;
+    bottom:-200px;
+    right:-150px;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    width:100%;
+    padding:25px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#ffcc00;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ffcc00;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+}
+
+.hero-left{
+    width:65%;
+}
+
+.small-title{
+    color:#ffcc00;
+    font-size:12px;
+    letter-spacing:4px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(70px,11vw,170px);
+    line-height:.82;
+    letter-spacing:3px;
+}
+
+.hero h1 span{
+    display:block;
+    color:transparent;
+    -webkit-text-stroke:2px #ffcc00;
+}
+
+.hero-line{
+    width:120px;
+    height:5px;
+    background:#ffcc00;
+    margin:30px 0;
+}
+
+.tagline{
+    color:#aaa;
+    letter-spacing:2px;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.hero h2{
+    font-size:22px;
+    line-height:1.5;
+}
+
+.hero h2 span{
+    color:#ffcc00;
+}
+
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 30px;
+    background:#ffcc00;
+    color:black;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(255,204,0,.3);
+}
+
+
+/* HERO RIGHT */
+
+.hero-right{
+    width:35%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.circle{
+    width:300px;
+    height:300px;
+    border:2px solid #ffcc00;
+    border-radius:50%;
+    position:absolute;
+    animation:rotate 15s linear infinite;
+}
+
+.lion-text{
+    font-size:150px;
+    z-index:2;
+    filter:drop-shadow(0 0 30px rgba(255,204,0,.4));
+}
+
+.champion{
+    position:absolute;
+    bottom:-80px;
+    text-align:center;
+    letter-spacing:3px;
+}
+
+.champion span{
+    display:block;
+    color:#777;
+    font-size:9px;
+}
+
+.champion strong{
+    font-size:35px;
+    color:#ffcc00;
+}
+
+
+/* ABOUT */
+
+.about{
+    min-height:80vh;
+    padding:120px 12%;
+    display:flex;
+    gap:80px;
+    align-items:flex-start;
+}
+
+.section-number{
+    font-family:'Anton';
+    font-size:100px;
+    color:#ffcc00;
+    opacity:.2;
+}
+
+.about-content h2,
+.identity h2,
+.mindset h2{
+    font-size:45px;
+    line-height:1.2;
+}
+
+.about-content h2 span,
+.identity h2 span,
+.mindset h2 span{
+    color:#ffcc00;
+}
+
+.description{
+    max-width:700px;
+    color:#aaa;
+    line-height:1.9;
+    margin-top:25px;
+}
+
+
+/* IDENTITY */
+
+.identity{
+    padding:120px 7%;
+}
+
+.center{
+    text-align:center;
+}
+
+.center-title{
+    text-align:center;
+}
+
+.cards{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    padding:35px 25px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#ffcc00;
+    box-shadow:0 20px 40px rgba(255,204,0,.08);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#ffcc00;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* MINDSET */
+
+.mindset{
+    padding:120px 7%;
+}
+
+.mindset-box{
+    border:1px solid #222;
+    padding:80px;
+    background:linear-gradient(135deg,#111,#080808);
+}
+
+.mindset-box p{
+    color:#aaa;
+    margin-top:25px;
+}
+
+.mindset-tags{
+    display:flex;
+    gap:15px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.mindset-tags span{
+    border:1px solid #ffcc00;
+    color:#ffcc00;
+    padding:10px 20px;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:80px 7%;
+    text-align:center;
+    border-top:1px solid #222;
+}
+
+footer h2{
+    font-family:'Anton';
+    font-size:50px;
+    letter-spacing:2px;
+}
+
+footer h2 span{
+    color:#ffcc00;
+}
+
+footer p{
+    color:#ffcc00;
+    letter-spacing:3px;
+    font-size:11px;
+    margin-top:10px;
+}
+
+.footer-line{
+    width:100px;
+    height:2px;
+    background:#ffcc00;
+    margin:30px auto;
+}
+
+footer small{
+    color:#555;
+}
+
+
+/* ANIMATION */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        padding-top:80px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+    }
+
+    .hero-right{
+        margin-top:80px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about{
+        flex-direction:column;
+        gap:20px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    nav{
+        padding:20px 6%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:60px 7%;
+    }
+
+    .hero h1{
+        font-size:70px;
+    }
+
+    .hero h2{
+        font-size:17px;
+    }
+
+    .circle{
+        width:220px;
+        height:220px;
+    }
+
+    .lion-text{
+        font-size:110px;
+    }
+
+    .about,
+    .identity,
+    .mindset{
+        padding:80px 7%;
+    }
+
+    .about-content h2,
+    .identity h2,
+    .mindset h2{
+        font-size:30px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .mindset-box{
+        padding:40px 25px;
+    }
+
+}
