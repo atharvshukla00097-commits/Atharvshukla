@@ -599,3 +599,12 @@ footer small{
 .hero-name h1::first-line{
     color:#fff;
 }
+.gallery-grid img,
+.photo-card img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
