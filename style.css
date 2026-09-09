@@ -330,3 +330,72 @@ nav{
 .identity h2 span,
 .mindset h2 span{
     color:#
+   /* VIDEO HORIZONTAL LAYOUT */
+
+.video-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.video-card{
+    background:#111;
+    border:1px solid #222;
+    padding:10px;
+    transition:.4s;
+}
+
+.video-card video{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    background:#000;
+   /* SMALL PHOTO LAYOUT */
+
+.gallery-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:15px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.photo-card{
+    position:relative;
+    height:220px;
+    overflow:hidden;
+    border-radius:12px;
+    border:1px solid #333;
+    background:#111;
+}
+
+.photo-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+}
+   @media(max-width:600px){
+
+    .video-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-card video{
+        height:220px;
+    }
+
+    .photo-card{
+        height:220px;
+    }
+
+   }
