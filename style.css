@@ -81,6 +81,16 @@ nav{
 
 
 /* HERO */
+<div class="hero-photo">
+
+    <img src="images.photo1.jpg" alt="Atharv Shukla">
+
+    <div class="hero-name">
+        <span>THE OFFICIAL WORLD OF</span>
+        <h1>ATHARV<br>SHUKLA</h1>
+    </div>
+
+</div>
 
 .hero{
     min-height:90vh;
@@ -531,4 +541,61 @@ footer small{
         height:300px;
     }
 
+}
+.hero-photo{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* Dark overlay — black spots nahi, smooth cinematic effect */
+.hero-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.75) 0%,
+        rgba(0,0,0,.35) 45%,
+        rgba(0,0,0,.05) 100%
+    );
+    pointer-events:none;
+}
+
+.hero-name{
+    position:absolute;
+    z-index:5;
+    left:7%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.hero-name span{
+    color:#ffcc00;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.hero-name h1{
+    margin-top:15px;
+    font-family:'Anton',sans-serif;
+    font-size:clamp(70px,10vw,160px);
+    line-height:.82;
+    letter-spacing:3px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.hero-name h1::first-line{
+    color:#fff;
 }
