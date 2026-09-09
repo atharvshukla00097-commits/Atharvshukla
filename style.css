@@ -750,3 +750,36 @@ footer small{
     height:160px !important;
     width:100% !important;
 }
+/* FINAL PHOTO SIZE FIX */
+
+section.gallery .gallery-grid{
+    width:700px !important;
+    max-width:90% !important;
+    margin:40px auto 0 !important;
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:12px !important;
+}
+
+section.gallery .gallery-grid .photo-card{
+    height:150px !important;
+    min-height:0 !important;
+    max-height:150px !important;
+}
+
+section.gallery .gallery-grid .photo-card img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+}@media(max-width:600px){
+
+    section.gallery .gallery-grid{
+        width:90% !important;
+        grid-template-columns:repeat(2,1fr) !important;
+    }
+
+    section.gallery .gallery-grid .photo-card{
+        height:130px !important;
+    }
+
+}
