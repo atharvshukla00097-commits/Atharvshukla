@@ -1,10 +1,10 @@
-/* ================================
+/* ========================================
    ATHARV SHUKLA PORTFOLIO
    CSK YELLOW + BLACK THEME
-================================ */
+======================================== */
 
 
-/* RESET */
+/* ========== RESET ========== */
 
 *{
     margin:0;
@@ -12,15 +12,12 @@
     box-sizing:border-box;
 }
 
-
-/* SMOOTH SCROLL */
-
 html{
     scroll-behavior:smooth;
 }
 
 
-/* BODY */
+/* ========== BODY ========== */
 
 body{
     font-family:'Poppins',sans-serif;
@@ -30,9 +27,7 @@ body{
 }
 
 
-/* ================================
-   BACKGROUND GLOW
-================================ */
+/* ========== BACKGROUND GLOW ========== */
 
 .bg-glow{
     position:fixed;
@@ -58,9 +53,9 @@ body{
 }
 
 
-/* ================================
+/* ========================================
    NAVIGATION
-================================ */
+======================================== */
 
 nav{
     width:100%;
@@ -83,8 +78,6 @@ nav{
 .nav-links{
     display:flex;
     gap:25px;
-    flex-wrap:wrap;
-    justify-content:flex-end;
 }
 
 .nav-links a{
@@ -101,9 +94,9 @@ nav{
 }
 
 
-/* ================================
+/* ========================================
    HERO SECTION
-================================ */
+======================================== */
 
 .hero{
     min-height:90vh;
@@ -162,7 +155,7 @@ nav{
 }
 
 
-/* HERO BUTTON */
+/* ========== BUTTON ========== */
 
 .btn{
     display:inline-block;
@@ -183,9 +176,9 @@ nav{
 }
 
 
-/* ================================
+/* ========================================
    HERO RIGHT
-================================ */
+======================================== */
 
 .hero-right{
     width:35%;
@@ -230,9 +223,10 @@ nav{
 }
 
 
-/* ================================
+/* ========================================
    EDITING VIDEOS
-================================ */
+   HORIZONTAL / LANDSCAPE
+======================================== */
 
 .videos{
     padding:100px 7%;
@@ -260,11 +254,14 @@ nav{
     margin-top:15px;
 }
 
+
+/* 3 VIDEOS SIDE BY SIDE */
+
 .video-grid{
     margin-top:50px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:20px;
     max-width:1200px;
     margin-left:auto;
     margin-right:auto;
@@ -273,23 +270,29 @@ nav{
 .video-card{
     background:#111;
     border:1px solid #222;
-    padding:12px;
+    padding:10px;
+    border-radius:10px;
     overflow:hidden;
     transition:.4s;
 }
 
 .video-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     border-color:#ffcc00;
     box-shadow:0 20px 50px rgba(255,204,0,.15);
 }
 
+
+/* HORIZONTAL VIDEO */
+
 .video-card video{
     width:100%;
-    height:300px;
+    aspect-ratio:16 / 9;
+    height:auto;
     object-fit:cover;
     display:block;
     background:#000;
+    border-radius:6px;
 }
 
 .video-card h3{
@@ -300,9 +303,9 @@ nav{
 }
 
 
-/* ================================
+/* ========================================
    ABOUT
-================================ */
+======================================== */
 
 .about{
     min-height:80vh;
@@ -329,51 +332,125 @@ nav{
 .about-content h2 span,
 .identity h2 span,
 .mindset h2 span{
-    color:#
-   /* VIDEO HORIZONTAL LAYOUT */
-
-.video-grid{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-    max-width:1200px;
-    margin-left:auto;
-    margin-right:auto;
+    color:#ffcc00;
 }
 
-.video-card{
+.description{
+    max-width:700px;
+    color:#aaa;
+    line-height:1.9;
+    margin-top:25px;
+}
+
+
+/* ========================================
+   IDENTITY
+======================================== */
+
+.identity{
+    padding:120px 7%;
+}
+
+.center-title{
+    text-align:center;
+}
+
+.cards{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
     background:#111;
     border:1px solid #222;
-    padding:10px;
+    padding:35px 25px;
     transition:.4s;
 }
 
-.video-card video{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
-    background:#000;
-   /* SMALL PHOTO LAYOUT */
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#ffcc00;
+    box-shadow:0 20px 40px rgba(255,204,0,.08);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#ffcc00;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* ========================================
+   PHOTO GALLERY
+   SMALL + COMPACT
+======================================== */
+
+.gallery{
+    padding:100px 7%;
+}
+
+.gallery-title{
+    text-align:center;
+    font-family:'Anton',sans-serif;
+    font-size:55px;
+    letter-spacing:2px;
+}
+
+.gallery-title span{
+    color:#ffcc00;
+}
+
+.gallery-text{
+    text-align:center;
+    color:#888;
+    margin-top:15px;
+}
+
+
+/* SMALL PHOTOS */
 
 .gallery-grid{
     margin-top:40px;
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:15px;
+
+    /* Gallery ko compact rakhega */
     max-width:900px;
+
     margin-left:auto;
     margin-right:auto;
 }
 
 .photo-card{
     position:relative;
+
+    /* SMALL PHOTO SIZE */
     height:220px;
+
     overflow:hidden;
     border-radius:12px;
     border:1px solid #333;
     background:#111;
+    transition:.4s;
+}
+
+.photo-card:hover{
+    transform:translateY(-8px);
+    border-color:#ffcc00;
 }
 
 .photo-card img{
@@ -381,17 +458,281 @@ nav{
     height:100%;
     object-fit:cover;
     display:block;
+    transition:.5s;
 }
-}
-   @media(max-width:600px){
 
-    .video-grid,
+.photo-card:hover img{
+    transform:scale(1.08);
+}
+
+.photo-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:15px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+}
+
+.photo-overlay h3{
+    color:#ffcc00;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+
+/* ========================================
+   MINDSET
+======================================== */
+
+.mindset{
+    padding:120px 7%;
+}
+
+.mindset-box{
+    border:1px solid #222;
+    padding:80px;
+    background:linear-gradient(135deg,#111,#080808);
+}
+
+.mindset-box p{
+    color:#aaa;
+    margin-top:25px;
+}
+
+.mindset-tags{
+    display:flex;
+    gap:15px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.mindset-tags span{
+    border:1px solid #ffcc00;
+    color:#ffcc00;
+    padding:10px 20px;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer{
+    padding:80px 7%;
+    text-align:center;
+    border-top:1px solid #222;
+}
+
+footer h2{
+    font-family:'Anton',sans-serif;
+    font-size:50px;
+    letter-spacing:2px;
+}
+
+footer h2 span{
+    color:#ffcc00;
+}
+
+footer p{
+    color:#ffcc00;
+    letter-spacing:3px;
+    font-size:11px;
+    margin-top:10px;
+}
+
+.footer-line{
+    width:100px;
+    height:2px;
+    background:#ffcc00;
+    margin:30px auto;
+}
+
+footer small{
+    color:#555;
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        padding-top:80px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+    }
+
+    .hero-right{
+        margin-top:60px;
+    }
+
+    .about{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
     .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        max-width:650px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:600px){
+
+    nav{
+        padding:20px 6%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:60px 7%;
+    }
+
+    .hero h1{
+        font-size:70px;
+    }
+
+    .hero h2{
+        font-size:17px;
+    }
+
+    .hero-right{
+        min-height:280px;
+        margin-top:30px;
+    }
+
+    .circle{
+        width:220px;
+        height:220px;
+    }
+
+    .lion-text{
+        font-size:110px;
+    }
+
+    .champion{
+        bottom:0;
+    }
+
+    .about,
+    .identity,
+    .mindset,
+    .videos,
+    .gallery{
+        padding:80px 7%;
+    }
+
+    .about-content h2,
+    .identity h2,
+    .mindset h2{
+        font-size:30px;
+    }
+
+    .cards{
         grid-template-columns:1fr;
     }
 
+    /* ONE VIDEO PER ROW */
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-title,
+    .gallery-title{
+        font-size:40px;
+    }
+
+    /* VIDEO HORIZONTAL */
+
     .video-card video{
-        height:220px;
+        aspect-ratio:16 / 9;
+        height:auto;
+    }
+
+    /* SMALL PHOTOS */
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        max-width:100%;
+    }
+
+    .photo-card{
+        height:160px;
+    }
+
+    .photo-overlay{
+        padding:10px;
+    }
+
+    .photo-overlay h3{
+        font-size:11px;
+    }
+
+    .mindset-box{
+        padding:40px 25px;
+    }
+
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media(max-width:400px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
     }
 
     .photo-card{
